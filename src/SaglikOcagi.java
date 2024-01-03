@@ -1,7 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class SaglikOcagi extends JFrame {
+public class SaglikOcagi extends JFrame implements ActionListener {
     JButton hesapOLustur =new JButton("HESAP OLUŞTUR");
     JButton giris = new JButton("GİRİŞ YAP");
     JLabel saLabel = new JLabel("SAĞLIK OCAĞI SİSTEMİ");
@@ -27,7 +29,7 @@ public class SaglikOcagi extends JFrame {
         giris.setBounds(86, 300, 450, 200);
         giris.setForeground(new Color(0xFFFFFF));
         hesapOLustur.setForeground(new Color(0xFFFFFF));
-
+        hesapOLustur.addActionListener(this);
         panel.setBackground(Color.decode("#4A4A4A"));
         this.getContentPane().setBackground(Color.LIGHT_GRAY);
         giris.setBackground(Color.decode("#4A4A4A"));
@@ -50,6 +52,13 @@ public class SaglikOcagi extends JFrame {
 
     }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource() == hesapOLustur){
+            new HesapOlustur();
+            dispose();
+        }
+    }
 }
 
 
