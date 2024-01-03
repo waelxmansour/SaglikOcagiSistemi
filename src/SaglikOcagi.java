@@ -3,7 +3,7 @@ import java.awt.*;
 
 public class SaglikOcagi extends JFrame {
     JButton hesapOLustur =new JButton("HESAP OLUŞTUR");
-    JButton giris = new JButton("GİRİŞ");
+    JButton giris = new JButton("GİRİŞ YAP");
     JLabel saLabel = new JLabel("SAĞLIK OCAĞI SİSTEMİ");
     JPanel panel = new JPanel(null);
 
@@ -22,7 +22,11 @@ public class SaglikOcagi extends JFrame {
 
         saLabel.setBounds(360, 0, 460, 80);
         hesapOLustur.setBounds(664, 300, 450, 200);
+        giris.setFont(new Font("Inter",Font.BOLD,32));
+        hesapOLustur.setFont(new Font("Inter",Font.BOLD,32));
         giris.setBounds(86, 300, 450, 200);
+        giris.setForeground(new Color(0xFFFFFF));
+        hesapOLustur.setForeground(new Color(0xFFFFFF));
 
         panel.setBackground(Color.decode("#4A4A4A"));
         this.getContentPane().setBackground(Color.LIGHT_GRAY);
@@ -47,5 +51,7 @@ public class SaglikOcagi extends JFrame {
     }
 
 }
+
+
 
 
